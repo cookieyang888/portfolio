@@ -64,6 +64,17 @@ form button {
     font-size: 400%;
 }
 
+.home-page > h1,
+.projects-page > h1 {
+    padding-bottom: 0.35rem;
+    border-bottom: 1px solid oklch(82% 0.03 250);
+}
+
+.projects-page > section > h2 {
+    padding-left: 0.6rem;
+    border-left: 0.25rem solid var(--color-accent);
+}
+
 h1,
 h2,
 h3,
@@ -84,6 +95,8 @@ h6 {
     display: grid;
     grid-template-rows: subgrid;
     grid-row: span 2;
+    padding-top: 1rem;
+    border-top: 2px solid oklch(88% 0.02 250);
 }
 
 .projects h3 {
