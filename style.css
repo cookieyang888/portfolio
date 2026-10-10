@@ -90,6 +90,11 @@ h6 {
     margin: 0;
 }
 
+.projects ul {
+    margin: 0;
+    padding-left: 0;
+}
+
 .profile-photo {
     width: 100%;
     max-width: 320px;
