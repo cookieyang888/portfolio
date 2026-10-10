@@ -94,18 +94,32 @@ h6 {
 .projects article {
     display: grid;
     grid-template-rows: subgrid;
-    grid-row: span 2;
+    grid-row: span 3;
     padding-top: 1rem;
     border-top: 2px solid oklch(88% 0.02 250);
 }
 
+.projects.featured article {
+    grid-row: span 2;
+}
+
+.projects h2,
 .projects h3 {
+    margin: 0;
+}
+
+.projects img {
+    width: 100%;
+    height: auto;
+}
+
+.projects p {
     margin: 0;
 }
 
 .projects ul {
     margin: 0;
-    padding-left: 0;
+    padding-left: 1.25rem;
 }
 
 .resume > header {
