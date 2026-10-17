@@ -1,5 +1,6 @@
 html {
     --color-accent: oklch(60% 0.18 250);
+    color-scheme: light dark;
     accent-color: var(--color-accent);
 }
 
@@ -11,12 +12,14 @@ body {
     max-width: 100ch;
     margin-inline: auto;
     padding-inline: 1rem;
+    padding-top: 3rem;
 }
 
 nav {
+    --border-color: oklch(50% 0.1 200 / 40%);
     display: flex;
     margin-bottom: 2rem;
-    border-bottom: 1px solid oklch(80% 0.03 200);
+    border-bottom: 1px solid var(--border-color);
 }
 
 nav a {
@@ -29,17 +32,18 @@ nav a {
 
 nav a.current {
     padding-bottom: 0.1em;
-    border-bottom: 0.4em solid oklch(80% 0.03 200);
+    border-bottom: 0.4em solid var(--border-color);
 }
 
 nav a:hover {
     padding-bottom: 0.1em;
     border-bottom: 0.4em solid var(--color-accent);
-    background-color: oklch(from var(--color-accent) 95% 0.02 h);
+    background-color: color-mix(in oklch, var(--color-accent), canvas 85%);
 }
 
 input,
 textarea,
+select,
 button {
     font: inherit;
 }
@@ -67,7 +71,7 @@ form button {
 .home-page > h1,
 .projects-page > h1 {
     padding-bottom: 0.35rem;
-    border-bottom: 1px solid oklch(82% 0.03 250);
+    border-bottom: 1px solid oklch(50% 0.06 250 / 40%);
 }
 
 .projects-page > section > h2 {
@@ -96,7 +100,7 @@ h6 {
     grid-template-rows: subgrid;
     grid-row: span 3;
     padding-top: 1rem;
-    border-top: 2px solid oklch(88% 0.02 250);
+    border-top: 2px solid oklch(50% 0.06 250 / 30%);
 }
 
 .projects h2 {
@@ -120,7 +124,7 @@ h6 {
 
 .resume > header p {
     margin: 0;
-    color: oklch(45% 0.02 250);
+    color: color-mix(in oklch, canvastext 75%, canvas);
 }
 
 .resume > section {
@@ -137,7 +141,7 @@ h6 {
 .resume article {
     padding-bottom: 1.25rem;
     margin-bottom: 1.25rem;
-    border-bottom: 1px solid oklch(88% 0.02 250);
+    border-bottom: 1px solid oklch(50% 0.06 250 / 30%);
 }
 
 .resume article:last-child {
@@ -151,7 +155,7 @@ h6 {
 
 .resume article header p {
     margin-block: 0 0.75rem;
-    color: oklch(42% 0.02 250);
+    color: color-mix(in oklch, canvastext 75%, canvas);
 }
 
 .resume article > p,
@@ -191,4 +195,15 @@ h6 {
     width: 100%;
     max-width: 320px;
     height: auto;
+}
+
+.color-scheme {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 80%;
+}
+
+a:not(nav a) {
+    color: color-mix(in oklch, var(--color-accent) 80%, canvastext);
 }
