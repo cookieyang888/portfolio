@@ -1,4 +1,4 @@
-import { fetchJSON, renderProjects } from '../global.js';
+import { fetchJSON, renderProjects } from '../global.js?v=lab04-2';
 
 const container = document.querySelector('.projects');
 const title = document.querySelector('.projects-title');
