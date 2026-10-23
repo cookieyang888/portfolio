@@ -4,13 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>David Yang: Personal site and portfolio</title>
-    <link rel="stylesheet" href="style.css?v=lab03">
+    <link rel="stylesheet" href="style.css?v=lab04">
     <script type="module" src="global.js"></script>
+    <script type="module" src="index.js"></script>
 </head>
-<body>
+<body class="home-page">
     <h1>David (Tianyu) Yang</h1>
     <p>Welcome to my personal website! This portfolio will showcase my projects and what I learn along the way.</p>
     <img class="profile-photo" src="images/profile-photo.png" alt="Portrait of David Yang wearing a gray suit and tie against a blue background">
     <p>Me in a suit.</p>
+    <section aria-labelledby="latest-projects-title">
+        <h2 id="latest-projects-title">Latest Projects</h2>
+        <div class="projects" aria-live="polite">Loading projects…</div>
+        <p><a href="projects/">View all projects</a></p>
+    </section>
+    <section aria-labelledby="github-title">
+        <h2 id="github-title">GitHub Profile</h2>
+        <p><a href="https://github.com/cookieyang888">@cookieyang888</a></p>
+        <div id="profile-stats" aria-live="polite">Loading GitHub statistics…</div>
+    </section>
 </body>
 </html>

@@ -82,3 +82,64 @@ form?.addEventListener('submit', (event) => {
     ).join('&');
     location.href = `${form.action}?${parameters}`;
 });
+
+// Lab 4: shared data loading and project rendering.
+export async function fetchJSON(url) {
+    try {
+        const response = await fetch(url);
+        if (!response.ok) {
+            throw new Error(`Failed to fetch JSON (${response.status} ${response.statusText})`);
+        }
+        return await response.json();
+    } catch (error) {
+        console.error('Error fetching or parsing JSON data:', error);
+        throw error;
+    }
+}
+
+export function renderProjects(projects, containerElement, headingLevel = 'h2') {
+    if (!(containerElement instanceof Element)) {
+        throw new TypeError('A project container element is required.');
+    }
+    if (!Array.isArray(projects)) {
+        throw new TypeError('Projects must be an array.');
+    }
+    if (!/^h[1-6]$/.test(headingLevel)) {
+        throw new TypeError('Heading level must be h1 through h6.');
+    }
+    containerElement.replaceChildren();
+    if (projects.length === 0) {
+        containerElement.textContent = 'No projects to display yet.';
+        return;
+    }
+    for (const project of projects) {
+        const article = document.createElement('article');
+        const heading = document.createElement(headingLevel);
+        heading.textContent = project.title || 'Untitled project';
+        const image = document.createElement('img');
+        image.src = new URL(project.image || 'images/project-placeholder.svg', BASE_PATH);
+        image.alt = `Illustration for ${heading.textContent}`;
+        image.width = 640;
+        image.height = 360;
+        image.loading = 'lazy';
+        const details = document.createElement('div');
+        const description = document.createElement('p');
+        description.textContent = project.description || 'Description coming soon.';
+        const year = document.createElement('p');
+        year.className = 'project-year';
+        year.textContent = `${project.year ?? 'Year to be added'}${project.placeholder ? ' · Placeholder' : ''}`;
+        details.append(description, year);
+        if (project.url) {
+            const link = document.createElement('a');
+            link.href = project.url;
+            link.textContent = project.linkLabel || 'View project';
+            details.append(link);
+        }
+        article.append(heading, image, details);
+        containerElement.append(article);
+    }
+}
+
+export async function fetchGitHubData(username) {
+    return fetchJSON(`https://api.github.com/users/${encodeURIComponent(username)}`);
+}

@@ -1,0 +1,90 @@
+[
+  {
+    "title": "AI-Powered Market Dashboard",
+    "year": 2026,
+    "image": "images/project-placeholder.svg",
+    "description": "A financial market intelligence dashboard that turns multi-source data into daily signals for monitoring, analysis, and trading decisions.",
+    "placeholder": false,
+    "url": "https://github.com/cookieyang888/market-daily-dashboard",
+    "linkLabel": "View repository"
+  },
+  {
+    "title": "Ocean Pulse",
+    "year": 2026,
+    "image": "images/project-placeholder.svg",
+    "description": "An end-to-end machine-learning project that classifies ocean ecosystem health and presents the results through an interactive dashboard.",
+    "placeholder": false,
+    "url": "https://cookieyang888.github.io/datahacks-2026/",
+    "linkLabel": "View live demo"
+  },
+  {
+    "title": "Portfolio: JavaScript Navigation and Themes",
+    "year": 2026,
+    "image": "images/project-placeholder.svg",
+    "description": "DSC 106 Lab 3: generated shared navigation with JavaScript, automatically highlighted the current page, and saved theme preferences with localStorage.",
+    "placeholder": false
+  },
+  {
+    "title": "Portfolio: Responsive CSS Layout",
+    "year": 2026,
+    "image": "images/project-placeholder.svg",
+    "description": "DSC 106 Lab 2: styled the portfolio with CSS grids, project cards, navigation states, and responsive layouts.",
+    "placeholder": false
+  },
+  {
+    "title": "Portfolio: HTML Foundations",
+    "year": 2026,
+    "image": "images/project-placeholder.svg",
+    "description": "DSC 106 Lab 1: built the home, projects, contact, and resume pages using semantic HTML.",
+    "placeholder": false
+  },
+  {
+    "title": "Public Health Visualizer",
+    "year": 2025,
+    "image": "images/project-placeholder.svg",
+    "description": "Placeholder project: Public Health Visualizer. Details and results will be added as this portfolio grows.",
+    "placeholder": true
+  },
+  {
+    "title": "Energy Market Analysis",
+    "year": 2024,
+    "image": "images/project-placeholder.svg",
+    "description": "Placeholder project: Energy Market Analysis. Details and results will be added as this portfolio grows.",
+    "placeholder": true
+  },
+  {
+    "title": "Campus Data Guide",
+    "year": 2023,
+    "image": "images/project-placeholder.svg",
+    "description": "Placeholder project: Campus Data Guide. Details and results will be added as this portfolio grows.",
+    "placeholder": true
+  },
+  {
+    "title": "Financial Risk Monitor",
+    "year": 2025,
+    "image": "images/project-placeholder.svg",
+    "description": "Placeholder project: Financial Risk Monitor. Details and results will be added as this portfolio grows.",
+    "placeholder": true
+  },
+  {
+    "title": "Sports Performance Study",
+    "year": 2024,
+    "image": "images/project-placeholder.svg",
+    "description": "Placeholder project: Sports Performance Study. Details and results will be added as this portfolio grows.",
+    "placeholder": true
+  },
+  {
+    "title": "Consumer Insights Report",
+    "year": 2023,
+    "image": "images/project-placeholder.svg",
+    "description": "Placeholder project: Consumer Insights Report. Details and results will be added as this portfolio grows.",
+    "placeholder": true
+  },
+  {
+    "title": "Environmental Data Map",
+    "year": 2025,
+    "image": "images/project-placeholder.svg",
+    "description": "Placeholder project: Environmental Data Map. Details and results will be added as this portfolio grows.",
+    "placeholder": true
+  }
+]
