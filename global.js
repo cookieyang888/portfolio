@@ -114,15 +114,20 @@ export function renderProjects(projects, containerElement, headingLevel = 'h2') 
     }
     for (const project of projects) {
         const article = document.createElement('article');
-        const heading = document.createElement(headingLevel);
+        article.innerHTML = `
+            <${headingLevel}></${headingLevel}>
+            <img>
+            <div class="project-details"></div>
+        `;
+        const heading = article.querySelector(headingLevel);
         heading.textContent = project.title || 'Untitled project';
-        const image = document.createElement('img');
+        const image = article.querySelector('img');
         image.src = new URL(project.image || 'images/project-placeholder.svg', BASE_PATH);
         image.alt = `Illustration for ${heading.textContent}`;
         image.width = 640;
         image.height = 360;
         image.loading = 'lazy';
-        const details = document.createElement('div');
+        const details = article.querySelector('.project-details');
         const description = document.createElement('p');
         description.textContent = project.description || 'Description coming soon.';
         const year = document.createElement('p');
