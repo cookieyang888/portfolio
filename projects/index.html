@@ -4,13 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects — David Yang</title>
-    <link rel="stylesheet" href="../style.css?v=lab04">
+    <link rel="stylesheet" href="../style.css?v=lab05">
     <script type="module" src="../global.js?v=lab04-2"></script>
-    <script type="module" src="projects.js?v=lab04-2"></script>
+    <script type="module" src="projects.js?v=lab05"></script>
 </head>
 <body class="projects-page">
     <h1 class="projects-title">Projects</h1>
-    <h2>Featured Projects</h2>
+    <section aria-labelledby="year-heading">
+        <h2 id="year-heading">Projects by year</h2>
+        <p>Explore the years below, or search to narrow down the projects. Select a year again to clear it.</p>
+        <div class="chart-container">
+            <svg id="projects-pie-plot" viewBox="-55 -55 110 110" role="group" aria-label="Filter projects by year"></svg>
+            <ul class="legend" aria-label="Project counts by year"></ul>
+        </div>
+        <p class="chart-empty" hidden>No matching projects to chart.</p>
+    </section>
+    <label class="search-label" for="project-search">Search projects</label>
+    <input id="project-search" class="searchBar" type="search" placeholder="Search titles, descriptions, years…" disabled>
+    <div class="filter-summary">
+        <p id="filter-status" role="status"></p>
+        <button id="clear-filters" type="button" disabled>Clear filters</button>
+    </div>
+    <h2>Project results</h2>
     <div class="projects" aria-live="polite">Loading projects…</div>
 </body>
 </html>
