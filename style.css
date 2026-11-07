@@ -345,3 +345,7 @@ a:not(nav a) {
 .meta-note { font-size: .85rem; }
 @media (max-width: 600px) { .meta-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); } #chart { overflow-x: auto; } #chart svg { min-width: 620px; } }
 @media (prefers-reduced-motion: reduce) { .commit-dots circle { transition: none; } }
+@media (max-width: 600px) {
+    nav { flex-wrap: wrap; }
+    nav a { flex: 1 0 25%; }
+}
