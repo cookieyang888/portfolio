@@ -48,3 +48,9 @@ open index.html
 ## Author
 
 David (Tianyu) Yang — [GitHub](https://github.com/cookieyang888)
+
+## Lab 6: Meta analysis
+
+The Meta page visualizes line attribution from Git history with D3. Install dependencies with `npm ci`, then run `npm run analyze` after committing source changes to refresh `meta/loc.csv`. The analyzer uses four spaces per indentation level to match the existing portfolio. Commit the generated CSV; keep `node_modules/` ignored. Uncommitted edits appear as a synthetic zero commit, and untracked files cannot be attributed, so generate the final CSV from committed source.
+
+The chart shows only commits represented in current lines, not every historical commit or full diff size. Dates and times use the viewer's local timezone. Hover or focus dots for details, click or press Enter to open GitHub, drag to brush, and use Clear selection or Escape to reset.

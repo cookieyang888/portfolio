@@ -320,3 +320,28 @@ a:not(nav a) {
 @media (prefers-reduced-motion: reduce) {
     #projects-pie-plot path { transition: none; }
 }
+
+/* Lab 6: codebase analysis */
+.meta-page section { margin-block: 2rem; }
+.meta-stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
+.meta-stats > div { border: 1px solid color-mix(in oklch, canvastext 20%, canvas); border-radius: .5rem; padding: 1rem; }
+.meta-stats dt, .info dt, .meta-note { color: color-mix(in oklch, canvastext 70%, canvas); }
+.meta-stats dd { margin: .5rem 0 0; font-size: 1.35rem; font-weight: bold; }
+#chart svg { display: block; width: 100%; height: auto; overflow: visible; }
+#chart svg text { fill: currentColor; font-family: inherit; }
+.meta-grid { opacity: .14; }
+.meta-grid .domain { display: none; }
+.commit-dots circle { fill: steelblue; fill-opacity: .7; stroke: canvas; stroke-width: 1; cursor: pointer; transform-origin: center; transform-box: fill-box; transition: fill 150ms, fill-opacity 150ms, transform 150ms; }
+.commit-dots circle:hover, .commit-dots circle:focus { fill-opacity: 1; transform: scale(1.15); stroke: currentColor; outline: none; }
+.commit-dots circle.selected { fill: #e56445; fill-opacity: 1; }
+.commit-dots circle.muted { fill-opacity: .18; }
+.commit-brush .selection { fill: steelblue; fill-opacity: .12; stroke: steelblue; stroke-dasharray: 5 3; }
+.meta-selection-header { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+.meta-selection-header button { width: auto; padding: .4rem .8rem; }
+.info { display: grid; grid-template-columns: auto 1fr; gap: .35rem 1rem; }
+.info dd { margin: 0; overflow-wrap: anywhere; }
+.tooltip { position: fixed; z-index: 10; margin: 0; padding: 1rem; max-width: min(310px, calc(100vw - 48px)); background: canvas; color: canvastext; border: 1px solid color-mix(in oklch, canvastext 20%, canvas); border-radius: .5rem; box-shadow: 0 4px 20px #0003; pointer-events: none; font-size: .85rem; }
+.tooltip[hidden] { display: none; }
+.meta-note { font-size: .85rem; }
+@media (max-width: 600px) { .meta-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); } #chart { overflow-x: auto; } #chart svg { min-width: 620px; } }
+@media (prefers-reduced-motion: reduce) { .commit-dots circle { transition: none; } }
