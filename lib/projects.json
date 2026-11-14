@@ -1,5 +1,14 @@
 [
   {
+    "title": "Bikewatching",
+    "year": 2026,
+    "image": "images/bikewatching.png",
+    "description": "Explore March 2024 Bluebikes traffic across Boston and Cambridge. An interactive Mapbox and D3 map with bike lanes, station traffic, and time-of-day filtering. DSC 106 Lab 7.",
+    "placeholder": false,
+    "url": "https://cookieyang888.github.io/bikewatching/",
+    "linkLabel": "Explore the map"
+  },
+  {
     "title": "AI-Powered Market Dashboard",
     "year": 2026,
     "image": "images/project-placeholder.svg",
